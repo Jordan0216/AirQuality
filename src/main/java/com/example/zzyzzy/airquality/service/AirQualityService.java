@@ -19,8 +19,7 @@ public class AirQualityService {
 
     // data.go.kr로 부터 미세먼지 정보를 가져옴
     public String getAirQualityDataBasic(String sidoName) throws IOException {
-        //serviceKey = System.getenv("app.serviceKey");
-        serviceKey = "서비스키";
+        serviceKey = System.getenv("app.serviceKey");
 
         // API 요청을 위해 URL 구성
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty"); /*URL*/
